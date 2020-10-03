@@ -1,0 +1,13 @@
+#close, #minimize {
+	position: fixed;
+	left: 10px;
+	top: 10px;
+	display: flex;
+	align-items: center;
+}
+#close > i, #minimize > i {
+	font-size: 90%;
+}
+#minimize {
+	left: 35px;
+}

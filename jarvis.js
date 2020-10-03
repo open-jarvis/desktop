@@ -61,6 +61,7 @@ function createWindow () {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(_ => {
 	createWindow()
+	require("./backend/controls.js")(win);
 })
 
 // Quit when all windows are closed, except on macOS. There, it's common
