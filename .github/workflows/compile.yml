@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: sudo apt-get install wine1.6-amd64
-    - run: npm install electron-packager -g
+    - run: npm install electron electron-packager -g
     - run: electron-packager . jarvis-dashboard --platform=win32 --arch=x64
       env:
         CI: true
