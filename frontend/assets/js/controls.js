@@ -19,7 +19,7 @@ document.getElementById("minimize").addEventListener("click", e => {
 	}, 300);
 });
 document.getElementById("settings").addEventListener("click", e => {
-	// ipcRenderer.send("controls", { action: "settings" });
+	ipcRenderer.send("controls", { action: "debugger" });
 });
 
 setTimeout(function() {

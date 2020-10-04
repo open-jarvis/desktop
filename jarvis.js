@@ -63,7 +63,7 @@ function createWindow () {
 	win.loadFile(`${FRONTEND}/index.html`)
 
 	// Open the DevTools.
-	// win.webContents.openDevTools()
+	// win.webContents.openDevTools({ mode: "undocked" })
 }
 
 // This method will be called when Electron has finished

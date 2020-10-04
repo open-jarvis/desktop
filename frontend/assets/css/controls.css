@@ -10,3 +10,19 @@
 }
 #minimize { left: 35px !important; }
 #settings { left: 60px !important; }
+
+
+#status {
+	position: fixed;
+	top: 7px;
+	right: 7px;
+	z-index: 100;
+	opacity: 1;
+	transition: .3s;
+}
+#status > span {
+	font-size: 14px;
+}
+#status.hidden {
+	opacity: 0;
+}

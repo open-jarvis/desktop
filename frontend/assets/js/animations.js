@@ -13,6 +13,10 @@ siriwave = {
 }
 
 
+function siriOff() {
+	siriWave.setAmplitude(0);
+	siriWave.setSpeed(0);
+}
 function siriSilent() {
 	siriWave.setAmplitude(siriwave.amplitude.SILENT);
 	siriWave.setSpeed(siriwave.speed.SILENT);
@@ -34,4 +38,4 @@ var siriWave = new SiriWave({
 	style: "ios9"
 });
 
-siriSilent();
+siriOff();

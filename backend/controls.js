@@ -3,8 +3,8 @@ const app = require("electron").app;
 
 function ipcControlsInit(win, wInfo) {
 	ipc.on("controls", function(event, args) {
+		console.log("backend:", args);
 		if (typeof args.action !== "undefined") {
-			console.log("controls:", args);
 			switch (args.action) {
 				case "exit":
 					win.close();

@@ -17,7 +17,7 @@
 :root {
 	--red: #ff3f3f;
 	--green: #0ccc19;
-	--blue: #030bfc;
+	--blue: #6970ff;
 	--orange: #fcba03;
 }
 
@@ -70,10 +70,13 @@ CLASSES
 	border-radius: 50%;
 }
 .dot.red	{ background-color: var(--red);		}
-.dot.green	{ background-color: var(--green);	}
 .dot.blue	{ background-color: var(--blue);	}
+.dot.green	{ background-color: var(--green);	}
 .dot.orange	{ background-color: var(--orange);	}
-
+span.red	{ color: var(--red); }
+span.blue	{ color: var(--blue); }
+span.green	{ color: var(--green); }
+span.orange	{ color: var(--orange); }
 
 
 
@@ -87,8 +90,8 @@ IDS
 	border-radius: 7.5px;
 	transition: .3s;
 	opacity: 0;
-	overflow: hidden;
 }
 #main-container.visible {
 	opacity: .85;
 }
+
