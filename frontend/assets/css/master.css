@@ -20,6 +20,21 @@
 	--blue: #030bfc;
 	--orange: #fcba03;
 }
+
+
+
+
+
+
+/*
+ELEMENTS
+*/
+html, body {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	margin: 0;
+}
 i {
 	width: 22px;
 	font-family: 'Material Icons Round';
@@ -38,26 +53,16 @@ i {
 }
 
 
-html, body {
-	width: 100%;
-	height: 100%;
-	background-color: transparent;
-	margin: 0;
-}
-#main-container {
-	background-color: #000;
-	opacity: 0.85;
-	width: 100%;
-	height: 100%;
-	border-radius: 7.5px;
-}
-
-
-
-
 /*
-		CLASSES
+CLASSES
 */
+.titlebar {
+	-webkit-user-select: none;
+	-webkit-app-region: drag;
+}
+.titlebar-button {
+	-webkit-app-region: no-drag;
+}
 .dot {
 	width: 15px;
 	height: 15px;
@@ -68,3 +73,22 @@ html, body {
 .dot.green	{ background-color: var(--green);	}
 .dot.blue	{ background-color: var(--blue);	}
 .dot.orange	{ background-color: var(--orange);	}
+
+
+
+
+/*
+IDS
+*/
+#main-container {
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	border-radius: 7.5px;
+	transition: .3s;
+	opacity: 0;
+	overflow: hidden;
+}
+#main-container.visible {
+	opacity: .85;
+}

@@ -1,13 +1,12 @@
-#close, #minimize {
+#actions > .dot {
 	position: fixed;
 	left: 10px;
 	top: 10px;
 	display: flex;
 	align-items: center;
 }
-#close > i, #minimize > i {
+#actions > .dot > i {
 	font-size: 90%;
 }
-#minimize {
-	left: 35px;
-}
+#minimize { left: 35px !important; }
+#settings { left: 60px !important; }

@@ -4,21 +4,31 @@ let win = null;
 const FRONTEND = "./frontend"
 const BACKEND  = "./backend"
 
+
+// get display options
+let mainScreen;
+let screenWidth;
+let screenHeight;
+
+let windowWidth = 300;
+let windowHeight = 100;
+
+let padding = 10;
+
+
+// get app instance
 const app = electron.app;
+
+
+require('electron-reload')(__dirname);
+
 
 function createWindow () {
 	// get display options
-	const mainScreen = electron.screen.getPrimaryDisplay().size;
+	mainScreen = electron.screen.getPrimaryDisplay().size;
+	screenWidth = mainScreen.width;
+	screenHeight = mainScreen.height;
 	
-	const screenWidth = mainScreen.width;
-	const screenHeight = mainScreen.height;
-
-	const windowWidth = 300 * 3;
-	const windowHeight = 150 * 3;
-
-	const padding = 10;
-
-
 	// Create the browser window.
 	win = new electron.BrowserWindow({
 		width: windowWidth,
@@ -53,7 +63,7 @@ function createWindow () {
 	win.loadFile(`${FRONTEND}/index.html`)
 
 	// Open the DevTools.
-	win.webContents.openDevTools()
+	// win.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -61,7 +71,13 @@ function createWindow () {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(_ => {
 	createWindow()
-	require("./backend/controls.js")(win);
+	require("./backend/controls.js")(win, {
+		padding: padding,
+		screenWidth: screenWidth,
+		screenHeight: screenHeight,
+		windowWidth: windowWidth,
+		windowHeight: windowHeight
+	});
 })
 
 // Quit when all windows are closed, except on macOS. There, it's common
