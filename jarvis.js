@@ -13,8 +13,8 @@ function createWindow () {
 	const screenWidth = mainScreen.width;
 	const screenHeight = mainScreen.height;
 
-	const windowWidth = 300;
-	const windowHeight = 150;
+	const windowWidth = 300 * 3;
+	const windowHeight = 150 * 3;
 
 	const padding = 10;
 
