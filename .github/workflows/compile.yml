@@ -12,10 +12,11 @@ jobs:
         node-version: [10.x, 12.x]
 
     steps:
+    - uses: actions/checkout@v2
+    
     - name: Install wine64
     - run: sudo apt-get install wine1.6-amd64
     
-    - uses: actions/checkout@v2
     - name: Compile project using node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
