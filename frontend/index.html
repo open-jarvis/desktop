@@ -7,11 +7,13 @@
 		<link rel="stylesheet" href="assets/css/master.css">
 		<link rel="stylesheet" href="assets/css/animations.css">
 		<link rel="stylesheet" href="assets/css/controls.css">
-
+		
+		<script src="assets/js/states.js"></script>
 		<script src="assets/js/siri.js"></script>
 		<script src="assets/js/animations.js" defer></script>
 		<script src="assets/js/controls.js" defer></script>
 		<script src="assets/js/scan-network.js" defer></script>
+		<script src="assets/js/notifications.js" defer></script>
 
 		<title>Jarvis</title>
 	</head>
@@ -25,8 +27,14 @@
 				<div id="settings" class="dot green"><i>keyboard_arrow_right</i></div>
 			</div>
 
-			<div id="status"><span class="blue">Searching for Jarvis...</span></div>
-		
+			<div id="notifications"></div>
+			<div id="notification-details">
+				<div class="content"></div>
+				<!-- <div class="rect"></div> -->
+			</div>
+
+			<div id="status-dot" class="dot orange"></div>
+
 			<div id="siriwave"></div>
 		</div>
 

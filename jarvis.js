@@ -11,7 +11,7 @@ let screenWidth;
 let screenHeight;
 
 let windowWidth = 300;
-let windowHeight = 100;
+let windowHeight = 160;
 
 let padding = 10;
 

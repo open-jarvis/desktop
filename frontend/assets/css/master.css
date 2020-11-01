@@ -95,3 +95,70 @@ IDS
 	opacity: .85;
 }
 
+#status-dot {
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	width: 5px;
+	height: 5px;
+}
+
+#notifications {
+	position: fixed;
+	
+	/* left: 100px; */
+	left: 0;
+	right: 0;
+	margin: auto;
+
+	top: 10px;
+	width: fit-content;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#notifications > .notification {
+	margin-right: 5px;
+}
+#notifications > .notification > img {
+	height: 15px;
+}
+#notification-details {
+	position: fixed;
+	top: 35px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	opacity: 0;
+	transition: .2s;
+	background-color: rgba(255, 255, 255, 0.75);
+	width: 90%;
+	border-radius: 7px;
+}
+#notification-details > .content {
+	padding: 7px;
+}
+#notification-details > .rect {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	background-color: #fff;
+	border-radius: 4px;
+	transform: rotate(45deg);
+}
+#notification-details.visible {
+	opacity: 1;
+}
+#notification-details > * {
+	color: #000;
+}
+#notification-details > .content > p {
+	margin: 0;
+	font-size: 14px;
+}
+#notification-details > .content > p:nth-child(2) {
+	font-size: 12px;
+}
