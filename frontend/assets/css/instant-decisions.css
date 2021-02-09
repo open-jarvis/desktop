@@ -1,0 +1,62 @@
+#instant-decision {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 100vh;
+    margin: auto;
+    z-index: 10;
+    background-color: #fff;
+    transition: .2s;
+	border-radius: 10px;
+	width: 70vw;
+}
+#instant-decision.visible {
+	top: 20vh;
+}
+#instant-decision > .decision {
+	display: grid;
+	grid-template-areas: "infos" "buttons";
+	grid-gap: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	height: 100%;
+	grid-template-rows: 1fr 60px;
+}
+
+
+#instant-decision .infos {
+	grid-area: infos;
+	padding: 5px 0px;
+}
+#instant-decision .infos > .head {
+	margin-bottom: 5px;
+}
+#instant-decision .infos > span {
+	text-align: center;
+	display: block;
+}
+
+.options-wrapper {
+	grid-area: buttons;
+}
+.options {
+	width: 100%;
+    border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.options > .option {
+	border-radius: 7px;
+	width: 100%;
+	cursor: pointer;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+	align-items: center;
+	padding: 7px 0;
+}
+.options > .option:not(:last-child) {
+	margin-right: 10px;
+}

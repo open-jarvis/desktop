@@ -89,7 +89,8 @@ IDS
 	height: 100%;
 	border-radius: 7.5px;
 	transition: .3s;
-	opacity: 0;
+	/* opacity: 0; */
+	opacity: 0.85;
 }
 #main-container.visible {
 	opacity: .85;
@@ -161,4 +162,103 @@ IDS
 }
 #notification-details > .content > p:nth-child(2) {
 	font-size: 12px;
+}
+#actions {
+	position: relative;
+	z-index: 9999999999999;
+}
+#lock {
+	position: fixed;
+	background-color: #000;
+	left: 0;
+	top: 30px;
+	width: 100%;
+	height: calc(100% - 2 * 30px);
+	z-index: 9;
+	transition: .2s;
+	opacity: 1;
+}
+#lock.fade {
+	opacity: 0;
+}
+#lock.hidden {
+	display: none;
+}
+#lock > .icon > i {
+	display: block; 
+	margin: auto;
+	z-index: 15;
+	position: relative;
+	transition: .5s;
+}
+#lock > .icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 100px;
+	margin: auto;
+	color: #fff;
+	display: block;
+	height: 22px;
+}
+#lock > .icon::after {
+	content: "Logging in...";
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: 0;
+	margin: auto;
+	width: fit-content;
+	z-index: 5;
+	transform: translateX(-120px);
+	transition: .5s;
+	/* line-height: 22px; */
+	padding-top: 2px;
+}
+#lock > .icon.loading::after {
+	transform: translateX(15px);
+}
+#lock > .icon.loading > i {
+	transform: translateX(-55px);
+}
+#lock > .icon > .hider {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 38%;
+	background-color: #000;
+	z-index: 10;
+	position: absolute;
+}
+#lock > .icon.loading {
+}
+#lock > input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 30px;
+	margin: auto;
+	height: 20px;
+	padding: 5px 15px;
+	border: none;
+	border-radius: 5px;
+	outline: none !important;
+	text-align: center;
+}
+#lock > input#token {
+	top: 110px;
+	bottom: 0;
+}
+#lock > input#pre-shared-key {
+	top: 40px;
+	bottom: 0;
+}
+
+
+@media screen and (max-height: 55px) {
+	#siriwave {
+		display: none !important;
+	}
 }

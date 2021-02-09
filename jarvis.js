@@ -20,7 +20,7 @@ let padding = 10;
 const app = electron.app;
 
 
-require('electron-reload')(__dirname);
+// require('electron-reload')(__dirname);
 
 
 function createWindow () {
@@ -41,7 +41,8 @@ function createWindow () {
 	})
 
 	// make window always on top
-	win.setAlwaysOnTop(true, 'screen');
+	win.setAlwaysOnTop(true, 'screen-saver', 10);
+	win.setVisibleOnAllWorkspaces(true);
 
 	// make window not resizable
 	win.setResizable(false);

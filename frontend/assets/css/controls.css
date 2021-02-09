@@ -8,8 +8,8 @@
 #actions > .dot > i {
 	font-size: 90%;
 }
-#minimize { left: 35px !important; }
-#settings { left: 60px !important; }
+#minimize { left: 30px !important; }
+#maximize { left: 50px !important; }
 
 
 #status {

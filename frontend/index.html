@@ -2,29 +2,41 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 
 		<link rel="stylesheet" href="assets/css/master.css">
 		<link rel="stylesheet" href="assets/css/animations.css">
 		<link rel="stylesheet" href="assets/css/controls.css">
+		<link rel="stylesheet" href="assets/css/instant-decisions.css">
 		
 		<script src="assets/js/states.js"></script>
+		<script src="assets/js/Jarvis.js"></script>
 		<script src="assets/js/siri.js"></script>
 		<script src="assets/js/animations.js" defer></script>
 		<script src="assets/js/controls.js" defer></script>
-		<script src="assets/js/scan-network.js" defer></script>
 		<script src="assets/js/notifications.js" defer></script>
+		<script src="assets/js/instant-decisions.js" defer></script>
+		<script src="assets/js/main.js" defer></script>
 
 		<title>Jarvis</title>
 	</head>
 
 	<body>
-
 		<div id="main-container">
+
+			<div id="lock">
+				<div class="icon">
+					<div class="hider"></div>
+					<i>lock</i></div>
+				<input id="host" type="text" placeholder="Hostname or IP" autofocus>
+				<input id="pre-shared-key" type="password" placeholder="Pre-shared key">
+				<input id="token" type="password" placeholder="Token">
+			</div>
+	
 			<div id="actions">
 				<div id="close" class="dot red"><i>clear</i></div>
 				<div id="minimize" class="dot orange"><i>keyboard_arrow_down</i></div>
-				<div id="settings" class="dot green"><i>keyboard_arrow_right</i></div>
+				<div id="maximize" class="dot green"><i>keyboard_arrow_up</i></div>
 			</div>
 
 			<div id="notifications"></div>
@@ -32,6 +44,8 @@
 				<div class="content"></div>
 				<!-- <div class="rect"></div> -->
 			</div>
+
+			<div id="instant-decision"></div>
 
 			<div id="status-dot" class="dot orange"></div>
 
